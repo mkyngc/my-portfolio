@@ -396,9 +396,23 @@ function initContactForm() {
       feedback.className = 'form-feedback success';
       form.reset();
     } catch (err) {
-      feedback.textContent =
-        "Something went wrong sending that. Please email me directly, or try again in a moment.";
+      const fields = Object.fromEntries(new FormData(form).entries());
+      const mailto = 'mailto:' + encodeURIComponent(siteEmail.trim()) +
+        '?subject=' + encodeURIComponent(fields.subject || 'Portfolio message') +
+        '&body=' + encodeURIComponent((fields.message || '') + '\n\n— ' + (fields.name || '') + ' (' + (fields.email || '') + ')');
+      let reason = 'Something went wrong sending that.';
+      if (location.protocol === 'file:') {
+        reason = 'The contact form only works on the live website, not when the page is opened from a file on a computer.';
+      } else if (err && err.message && err.message !== 'Request failed' && err.message !== 'Failed to fetch') {
+        reason = err.message;
+      }
+      feedback.textContent = reason + ' You can ';
+      const a = document.createElement('a');
+      a.href = mailto;
+      a.textContent = 'send it with your email app instead';
+      feedback.append(a, '.');
       feedback.className = 'form-feedback error';
+      console.error('Contact form error:', err);
     } finally {
       submitBtn.disabled = false;
       spinner.hidden = true;

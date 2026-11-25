@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Portfolio</title>
+<meta content="Portfolio of Michaela Nagac, a web developer specializing in front-end and back-end development." name="description"/>
+<!-- Google Fonts: Poppins for headings, Inter for body -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome icons -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- ============ SKIP LINK (Accessibility) ============ -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<!-- ============ NAVIGATION ============ -->
+<header class="nav-header" id="navHeader">
+<nav class="navbar">
+<a class="nav-logo js-logo" href="#home"></a>
+<div class="nav-pill">
+<ul class="nav-links" id="navLinks">
+<li><a class="nav-link active-link" href="#home">Home</a></li>
+<li><a class="nav-link" href="#about">About</a></li>
+<li><a class="nav-link" href="#projects">Projects</a></li>
+<li><a class="nav-link" href="#certificates">Certificates</a></li>
+<li><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+</div>
+<div class="nav-end">
+<!-- Replace the href below with your actual resume file under assets/ -->
+<a class="btn-resume" download="" href="assets/Resume_Nagac.pdf" id="resumeBtn">
+<i aria-hidden="true" class="fa-solid fa-file-arrow-down"></i>
+<span>Download<br/>Resume</span>
+</a>
+<button aria-expanded="false" aria-label="Toggle navigation menu" class="nav-toggle" id="navToggle">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+</button>
+</div>
+</nav>
+</header>
+<main id="main-content">
+<!-- ============ HERO SECTION ============ -->
+<section class="hero" id="home">
+<img alt="" aria-hidden="true" class="hero-arrow hero-arrow-top" src="assets/images/arrow-bolt.svg"/>
+<img alt="" aria-hidden="true" class="hero-arrow hero-arrow-bottom" src="assets/images/arrow-bolt.svg"/>
+<div class="hero-container">
+<div class="hero-text">
+<p class="hero-greeting" id="heroGreeting"></p>
+<h1 class="hero-name" id="heroName"></h1>
+<h2 class="hero-title" id="heroTitle"></h2>
+<p class="hero-description" id="heroDesc"></p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#projects">View My Projects</a>
+<a class="btn btn-outline" href="#contact">Contact Me</a>
+</div>
+<div class="hero-divider" role="presentation"></div>
+<div class="hero-socials js-socials"></div>
+</div>
+<div class="hero-visual">
+<div aria-hidden="true" class="hero-orbit">
+<span class="orbit-ring orbit-ring-outer"></span>
+<span class="orbit-ring orbit-ring-inner"></span>
+<span class="orbit-glow"></span>
+<span class="orbit-chip orbit-chip-1"><i class="fa-brands fa-js"></i></span>
+<span class="orbit-chip orbit-chip-2"><i class="fa-brands fa-css3-alt"></i></span>
+<span class="orbit-chip orbit-chip-3"><i class="fa-brands fa-figma"></i></span>
+<span class="orbit-chip orbit-chip-4"><i class="fa-brands fa-node-js"></i></span>
+<div class="hero-photo-ring">
+<img alt="Portrait of Michaela Nagac" class="hero-photo" id="heroPhoto" src="assets/images/profile.svg"/>
+</div>
+</div>
+</div>
+</div>
+<a aria-label="Scroll to About section" class="scroll-indicator" href="#about">
+<span></span>
+</a>
+</section>
+<!-- ============ ABOUT SECTION ============ -->
+<section class="about" id="about">
+<div class="section-container">
+<h2 class="section-heading">About Me</h2>
+<div class="about-intro" id="aboutIntro"></div>
+<!-- Skills -->
+<div class="about-tabs" role="tablist" aria-label="About sections">
+          <button type="button" class="about-tab active" role="tab" id="tab-skills" aria-selected="true" aria-controls="panel-skills" data-tab="skills"><i class="fa-solid fa-code" aria-hidden="true"></i>Skills</button>
+          <button type="button" class="about-tab" role="tab" id="tab-education" aria-selected="false" aria-controls="panel-education" data-tab="education" tabindex="-1"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</button>
+          <button type="button" class="about-tab" role="tab" id="tab-experience" aria-selected="false" aria-controls="panel-experience" data-tab="experience" tabindex="-1"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experience</button>
+        </div>
+
+        <div class="about-block about-panel" id="panel-skills" role="tabpanel" aria-labelledby="tab-skills">
+<h3 class="about-subheading">Technical Skills</h3>
+<div class="skills-grid" id="skillsGrid"></div>
+</div>
+<!-- Education & Experience Timeline -->
+<div class="about-block about-panel" id="panel-education" role="tabpanel" aria-labelledby="tab-education" hidden>
+<h3 class="about-subheading">Education</h3>
+<div class="timeline" id="educationTimeline"></div>
+</div>
+
+        <div class="about-block about-panel" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience" hidden>
+<h3 class="about-subheading">Experience</h3>
+<div class="timeline" id="experienceTimeline"></div>
+</div>
+</div>
+</section>
+<!-- ============ PROJECTS SECTION ============ -->
+<section class="projects" id="projects">
+<div class="section-container">
+<h2 class="section-heading">Projects</h2>
+<div aria-label="Filter projects by category" class="project-filters" id="projectFilters" role="tablist"></div>
+<div class="project-grid" id="projectGrid"></div>
+<p class="project-empty-state" hidden="" id="projectEmptyState">No projects in this category yet — check back soon.</p>
+<div class="view-all-wrap" hidden="" id="projectViewAllWrap"><button aria-expanded="false" class="btn btn-outline" id="projectViewAll" type="button">View all</button></div>
+</div>
+</section>
+<!-- ============ CERTIFICATES SECTION ============ -->
+<section class="certificates" id="certificates">
+<div class="section-container">
+<h2 class="section-heading">Certificates</h2>
+<p class="certificates-lead">
+          A few courses and programs I've completed along the way. Click any certificate
+          to view it full-size.
+        </p>
+<div class="certificate-grid" id="certGrid"></div>
+<div class="view-all-wrap" hidden="" id="certViewAllWrap"><button aria-expanded="false" class="btn btn-outline" id="certViewAll" type="button">View all</button></div>
+</div>
+</section>
+<!-- ============ CONTACT SECTION ============ -->
+<section class="contact" id="contact">
+<div class="section-container">
+<h2 class="section-heading">Contact</h2>
+<div class="contact-grid">
+<div class="contact-info">
+<p class="contact-lead" id="contactLead"></p>
+<ul class="contact-details" id="contactDetails"></ul>
+<div class="hero-socials contact-socials js-socials"></div>
+</div>
+<form class="contact-form" id="contactForm" novalidate="">
+<!-- Messages go to the email set in Admin → Contact (see js/script.js). -->
+<input name="_honey" style="display:none" tabindex="-1" autocomplete="off" type="text"/>
+<input name="_subject" type="hidden" value="New portfolio contact form message"/>
+<input name="_captcha" type="hidden" value="false"/>
+<input name="_template" type="hidden" value="table"/>
+<div class="form-group">
+<label for="fullName">Full Name</label>
+<input id="fullName" name="name" placeholder="Juan Dela Cruz" required="" type="text"/>
+<span class="form-error" id="nameError"></span>
+</div>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input id="email" name="email" placeholder="juan@example.com" required="" type="email"/>
+<span class="form-error" id="emailError"></span>
+</div>
+<div class="form-group">
+<label for="subject">Subject</label>
+<input id="subject" name="subject" placeholder="Project inquiry" required="" type="text"/>
+<span class="form-error" id="subjectError"></span>
+</div>
+<div class="form-group">
+<label for="message">Message</label>
+<textarea id="message" name="message" placeholder="Tell me a bit about what you need..." required="" rows="5"></textarea>
+<span class="form-error" id="messageError"></span>
+</div>
+<button class="btn btn-primary form-submit" type="submit">
+<span class="btn-text">Send Message</span>
+<span class="btn-spinner" hidden=""></span>
+</button>
+<p aria-live="polite" class="form-feedback" id="formFeedback" role="status"></p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- ============ PROJECT DETAILS MODAL ============ -->
+<div class="modal-overlay" hidden="" id="projectModal">
+<div aria-labelledby="modalTitle" aria-modal="true" class="modal-box" role="dialog">
+<button aria-label="Close project details" class="modal-close" id="modalClose">×</button>
+<div class="modal-content" id="modalContent">
+<!-- Populated by JavaScript -->
+</div>
+</div>
+</div>
+<!-- ============ CERTIFICATE LIGHTBOX ============ -->
+<div class="modal-overlay" hidden="" id="certificateModal">
+<div aria-labelledby="certModalTitle" aria-modal="true" class="modal-box modal-box-cert" role="dialog">
+<button aria-label="Close certificate view" class="modal-close" id="certModalClose">×</button>
+<div class="modal-content" id="certModalContent">
+<!-- Populated by JavaScript -->
+</div>
+</div>
+</div>
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+<!-- <div class="footer-container">
+<a class="nav-logo js-logo" href="#home"></a>
+<ul class="footer-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#certificates">Certificates</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<div class="hero-socials js-socials"></div> -->
+</div>
+<p class="footer-copy">© <span id="currentYear"></span> <span class="js-fullname"></span>. All rights reserved.</p>
+</footer>
+<button aria-label="Back to top" class="back-to-top" id="backToTop">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
+<script src="js/content-data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#202020"/>
+      <stop offset="100%" stop-color="#101010"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g2)"/>
+  <rect x="40" y="40" width="520" height="320" rx="12" fill="none" stroke="#FF6B00" stroke-opacity="0.35" stroke-width="2"/>
+  <circle cx="90" cy="90" r="6" fill="#FF6B00"/>
+  <circle cx="112" cy="90" r="6" fill="#BDBDBD" opacity="0.4"/>
+  <circle cx="134" cy="90" r="6" fill="#BDBDBD" opacity="0.4"/>
+  <text x="300" y="210" font-family="Poppins, Arial, sans-serif" font-size="26" fill="#FFFFFF" text-anchor="middle">Inventory System</text>
+  <text x="300" y="240" font-family="Inter, Arial, sans-serif" font-size="15" fill="#FF6B00" text-anchor="middle">System Development</text>
+</svg>
